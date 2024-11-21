@@ -1,0 +1,5 @@
+PORT=3541
+HOST_DB=localhost
+USER_DB=root
+PASSWORD_DB=12345
+NAME_DB=devices

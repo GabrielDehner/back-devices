@@ -1,0 +1,13 @@
+node_modules
+build
+coverage
+.vscode
+.DS_STORE
+.env
+tmp
+package-lock.json
+*package-lock.json
+package-lock.*
+.idea
+.env.local
+.env.*

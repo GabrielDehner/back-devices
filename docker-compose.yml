@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  db:
+    container_name: mysql_devices
+    image: mysql:8.0.32
+    hostname: mysql
+    restart: always
+    command: 
+      --default-authentication-plugin=mysql_native_password
+      --group_concat_max_len=102400
+      --sort_buffer_size=512000000
+    environment:
+      MYSQL_ROOT_PASSWORD: ${PASSWORD_DB}
+      MYSQL_DATABASE: ${NAME_DB}
+      MYSQL_USER: ${USER_DB}
+      MYSQL_PASSWORD: ${PASSWORD_DB}
+    ports:
+      - '3301:3306'
+    expose:
+      - '3301'
+    volumes:
+      - 'db_data:/var/lib/mysql'
+
+volumes:
+  db_data:
